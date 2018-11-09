@@ -77,6 +77,11 @@ public class DefaultSpanRecorder extends AbstractRecorder implements SpanRecorde
     }
 
     @Override
+    public void setApiName0(String apiName) {
+        span.setApiName(apiName);
+    }
+
+    @Override
     void addAnnotation(Annotation annotation) {
         span.addAnnotation(annotation);
     }

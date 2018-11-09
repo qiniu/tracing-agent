@@ -39,6 +39,7 @@ public class Span extends DefaultFrameAttachment {
     private int elapsedTime; // optional
 
     private int apiId; // optional
+    private String apiName; // optional
     private short serviceType; // required
 
     private List<Annotation> annotations; // optional
@@ -138,6 +139,14 @@ public class Span extends DefaultFrameAttachment {
         this.apiId = apiId;
     }
 
+    public void setApiName(String apiName) {
+        this.apiName = apiName;
+    }
+    
+    public String getApiName() {
+        return apiName;
+    }
+
     public IntStringValue getExceptionInfo() {
         return exceptionInfo;
     }
@@ -214,6 +223,7 @@ public class Span extends DefaultFrameAttachment {
                 ", acceptorHost='" + acceptorHost + '\'' +
                 ", apiId=" + apiId +
                 ", exceptionInfo=" + exceptionInfo +
+                ", apiName=" + apiName +
                 "} " + super.toString();
     }
 }

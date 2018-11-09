@@ -178,6 +178,11 @@ public class WrappedSpanEventRecorder extends AbstractRecorder implements SpanEv
     void setApiId0(final int apiId) {
         spanEvent.setApiId(apiId);
     }
+  
+    @Override
+    void setApiName0(String apiName) {
+        spanEvent.setApiName(apiName);
+    }
 
     void addAnnotation(Annotation annotation) {
         spanEvent.addAnnotation(annotation);

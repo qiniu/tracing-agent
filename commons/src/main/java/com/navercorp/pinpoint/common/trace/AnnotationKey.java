@@ -151,6 +151,7 @@ public interface AnnotationKey {
     AnnotationKey API_METADATA = AnnotationKeyFactory.of(13, "API-METADATA");
     AnnotationKey RETURN_DATA = AnnotationKeyFactory.of(14, "RETURN_DATA", VIEW_IN_RECORD_SET);
     AnnotationKey API_TAG = AnnotationKeyFactory.of(10015, "API-TAG");
+    AnnotationKey API_NAME = AnnotationKeyFactory.of(10016, "API_NAME");
 
     // when you don't know the correct cause of errors.
     AnnotationKey ERROR_API_METADATA_ERROR = AnnotationKeyFactory.of(10000010, "API-METADATA-ERROR", ERROR_API_METADATA);

@@ -86,6 +86,7 @@ struct TSpanEvent {
     30: optional i32 asyncId;
     31: optional i32 nextAsyncId;
     32: optional i16 asyncSequence;
+    33: optional string apiName;
 }
 
 struct TSpan {
@@ -131,6 +132,7 @@ struct TSpan {
     31: optional i8 loggingTransactionInfo;
 
     32: optional i8 version = TRACE_V2;
+    33: optional string apiName;
 }
 
 struct TSpanChunk {

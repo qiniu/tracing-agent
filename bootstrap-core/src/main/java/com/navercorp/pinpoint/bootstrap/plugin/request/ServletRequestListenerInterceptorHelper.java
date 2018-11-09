@@ -93,6 +93,9 @@ public class ServletRequestListenerInterceptorHelper<T> {
             return;
         }
 
+        SpanRecorder spanRecorder = trace.getSpanRecorder();
+        spanRecorder.recordApi(methodDescriptor);
+
         final SpanEventRecorder recorder = trace.traceBlockBegin();
         recorder.recordServiceType(serviceType);
         recorder.recordApi(methodDescriptor);
